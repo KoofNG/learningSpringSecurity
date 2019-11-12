@@ -17,6 +17,7 @@ public class UserController {
         return "index";
     }
 
+
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String more() {
         return "more";
