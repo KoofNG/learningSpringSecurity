@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class UserController {
 
-//    @RequestMapping(value = "/user", method = RequestMethod.GET)
-//    public String login() {
-//        return "index";
-//    }
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String login() {
+        return "redirect: /user";
+    }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String home() {
@@ -26,6 +26,11 @@ public class UserController {
     @RequestMapping(value = "/admin/min", method = RequestMethod.GET)
     public String grab() {
         return "more";
+    }
+
+    @RequestMapping(value = "/admin/about", method = RequestMethod.GET)
+    public String about() {
+        return "about";
     }
 
 }
